@@ -3,79 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>INFO BY BORA - HOME</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body, html { height: 100%; font-family: 'Poppins', sans-serif; color: #fff; }
-    .slideshow-container {
-      position: relative;
-      height: 100vh;
-      overflow: hidden;
-    }
-    .slide {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-    }
-    .slide.active {
-      opacity: 1;
-    }
-    .content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      background: rgba(0, 0, 0, 0.6);
-      padding: 30px;
-      border-radius: 10px;
-    }
-    .content h1 {
-      font-size: 2.8rem;
-      margin-bottom: 10px;
-    }
-    .content p {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-    }
-    .content a {
-      text-decoration: none;
-      background: #ff3c3c;
-      padding: 10px 25px;
-      color: white;
-      border-radius: 25px;
-      font-weight: bold;
-    }
-    .content a:hover {
-      background: #e60000;
-    }
-  </style>
+  <title>Info By Bora - Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="slideshow-container">
-    <img src="https://source.unsplash.com/1600x900/?nature,water" class="slide active">
-    <img src="https://source.unsplash.com/1600x900/?mountains,clouds" class="slide">
-    <img src="https://source.unsplash.com/1600x900/?forest" class="slide">
+  <header>
+    <div class="logo">Info By Bora</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="page2.html">More</a>
+      <a href="uploads.html">Uploads</a>
+    </nav>
+  </header>
 
-    <div class="content">
-      <h1>INFO BY BORA</h1>
-      <p>Welcome to the ultimate space for memes, uploads & ideas.</p>
-      <a href="uploads.html">Explore Uploads</a>
+  <section class="banner">
+    <div class="banner-text">
+      <h1>Welcome to Info By Bora</h1>
+      <p>Stay ahead with the freshest memes, updates & ideas brought to you by <strong>AbhimaniBora1253</strong>. We keep it real. We keep it fresh.</p>
+      <a href="https://www.youtube.com/@AbhimaniBora1253" target="_blank">Subscribe on YouTube</a>
     </div>
-  </div>
+  </section>
 
-  <script>
-    let current = 0;
-    const slides = document.querySelectorAll('.slide');
-    setInterval(() => {
-      slides[current].classList.remove('active');
-      current = (current + 1) % slides.length;
-      slides[current].classList.add('active');
-    }, 4000);
-  </script>
+  <section class="uploads-link">
+    <a href="uploads.html" class="upload-btn">📁 Explore My Uploads</a>
+  </section>
+
+  <section class="features">
+    <div class="feature-box">
+      <h3>Daily Memes</h3>
+      <p>Laugh, share & relate – memes crafted with originality & humor.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Useful Updates</h3>
+      <p>Stay informed with valuable news & online content trends.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Creative Ideas</h3>
+      <p>Inspired thoughts, unique insights – directly from Bora’s mind.</p>
+    </div>
+  </section>
+
+  <footer>
+    📧 Contact: borahsumon033@gmail.com<br>
+    © 2025 INFO BY BORA. All rights reserved.
+  </footer>
 </body>
 </html>
