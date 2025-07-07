@@ -4,68 +4,78 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>INFO BY BORA - HOME</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body, html { height: 100%; font-family: 'Poppins', sans-serif; color: #fff; }
+    .slideshow-container {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .slide.active {
+      opacity: 1;
+    }
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 10px;
+    }
+    .content h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+    .content p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+    .content a {
+      text-decoration: none;
+      background: #ff3c3c;
+      padding: 10px 25px;
+      color: white;
+      border-radius: 25px;
+      font-weight: bold;
+    }
+    .content a:hover {
+      background: #e60000;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <div class="logo">INFO BY BORA</div>
-    <nav>
-      <a href="index.html">HOME</a>
-      <a href="page2.html">MORE</a>
-      <a href="uploads.html">UPLOADS</a>
-    </nav>
-  </header>
+  <div class="slideshow-container">
+    <img src="https://source.unsplash.com/1600x900/?nature,water" class="slide active">
+    <img src="https://source.unsplash.com/1600x900/?mountains,clouds" class="slide">
+    <img src="https://source.unsplash.com/1600x900/?forest" class="slide">
 
-  <section class="banner">
-    <div class="banner-text">
-      <h1>WELCOME TO INFO BY BORA</h1>
-      <p>STAY AHEAD WITH ORIGINAL CONTENT AND USEFUL UPDATES FROM <strong>ABHIMANIBORA1253</strong>.</p>
-      <a href="https://www.youtube.com/@ABHIMANIBORA1253" target="_blank">SUBSCRIBE ON YOUTUBE</a>
+    <div class="content">
+      <h1>INFO BY BORA</h1>
+      <p>Welcome to the ultimate space for memes, uploads & ideas.</p>
+      <a href="uploads.html">Explore Uploads</a>
     </div>
-  </section>
+  </div>
 
-  <section class="uploads-link">
-    <a href="uploads.html" class="upload-btn">📁 EXPLORE MY UPLOADS</a>
-  </section>
-
-  <section class="features">
-    <div class="feature-box">
-      <h3 style="color:#00ffd1;">🔥 TRENDING BOARD</h3>
-      <p>DISCOVER WHAT'S HOT AND CATCHY THIS WEEK!</p>
-    </div>
-    <div class="feature-box">
-      <p>✔ STYLISH DESIGN + TRENDING UPDATES IN ONE PLACE.</p>
-    </div>
-    <div class="feature-box">
-      <p>✔ CONNECT WITH ME FOR MORE COLLABS.</p>
-    </div>
-  </section>
-
-  <section class="contact-form" style="background:#181818;padding:30px;">
-    <h2 style="color:#00ffd1;">💬 SEND ME A MESSAGE</h2>
-    <form action="#" method="post" style="display:grid;gap:15px;max-width:400px;">
-      <input type="text" placeholder="Your Name" required style="padding:10px;border:none;border-radius:5px;">
-      <input type="email" placeholder="Your Email" required style="padding:10px;border:none;border-radius:5px;">
-      <textarea placeholder="Your Message" rows="5" required style="padding:10px;border:none;border-radius:5px;"></textarea>
-      <button type="submit" style="background:#ff3c3c;color:white;padding:10px;border:none;border-radius:5px;cursor:pointer;">Send</button>
-    </form>
-  </section>
-
-  <footer>
-    <div style="padding: 10px;">
-      <h3 style="color:#00ffd1;">📬 CONTACT ME</h3>
-      <p>📧 Email: <a href="mailto:borahsumon033@gmail.com" style="color:#ff3c3c;">borahsumon033@gmail.com</a></p>
-      <p>📷 Instagram: <a href="https://instagram.com" target="_blank" style="color:#ff3c3c;">@ABHIMANIBORA1253</a></p>
-      <p>▶ YouTube: <a href="https://www.youtube.com/@ABHIMANIBORA1253" target="_blank" style="color:#ff3c3c;">YouTube Channel</a></p>
-      <p>📱 WhatsApp: <a href="https://wa.me/919999999999" target="_blank" style="color:#ff3c3c;">Chat Now</a></p>
-    </div>
-    <div style="margin-top:10px;">
-      <a href="https://facebook.com" target="_blank">🌐 Facebook</a> |
-      <a href="https://twitter.com" target="_blank">🐦 Twitter</a> |
-      <a href="https://instagram.com" target="_blank">📸 Instagram</a>
-    </div>
-    <p style="color:#888;">© 2025 INFO BY BORA. ALL RIGHTS RESERVED.</p>
-  </footer>
+  <script>
+    let current = 0;
+    const slides = document.querySelectorAll('.slide');
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 4000);
+  </script>
 </body>
 </html>
