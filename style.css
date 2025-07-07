@@ -1,1 +1,118 @@
-body{font-family:Poppins,sans-serif;background:#111;color:#eee;margin:0}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0f0f0f;
+  color: #eee;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  padding: 20px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.logo {
+  font-size: 1.8rem;
+  color: #00ffd1;
+  font-weight: 700;
+}
+nav a {
+  color: #eee;
+  margin-left: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+nav a::after {
+  content: '';
+  height: 2px;
+  width: 0%;
+  background: #00ffd1;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s;
+}
+nav a:hover::after {
+  width: 100%;
+}
+.hero {
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+.hero-text {
+  position: relative;
+  z-index: 10;
+  max-width: 700px;
+  padding: 20px;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+.btn {
+  padding: 14px 28px;
+  background: #00ffd1;
+  color: #000;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  box-shadow: 0 0 10px #00ffd1aa;
+}
+.btn:hover {
+  background: #00c5a7;
+}
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 60px 20px;
+  background: #1b1b1b;
+}
+.feature-box {
+  background: #222;
+  padding: 25px;
+  border-radius: 12px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,255,209,0.1);
+}
+.feature-box h3 {
+  color: #00ffd1;
+  margin-bottom: 10px;
+}
+.feature-box p {
+  color: #bbb;
+  font-size: 0.95rem;
+}
+footer {
+  background: #000;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #777;
+}
