@@ -12,7 +12,7 @@
     }
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: #111;
+      background: linear-gradient(135deg, #111, #222);
       color: white;
     }
     header {
@@ -101,4 +101,72 @@
       color: white;
       font-size: 1rem;
     }
-    .contact
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: #888;
+    }
+    .contact-form button {
+      background: red;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+    .contact-form button:hover {
+      background: #e60000;
+    }
+    footer {
+      background: #000;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Info By Bora</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="page2.html">More</a>
+      <a href="https://youtube.com" target="_blank">YouTube</a>
+    </nav>
+  </header>  <div class="page2-layout">
+    <aside class="sidebar">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a href="https://youtube.com" target="_blank">📺 YouTube</a></li>
+        <li><a href="#gallery">🖼️ Gallery</a></li>
+        <li><a href="#contact">📧 Contact</a></li>
+      </ul>
+    </aside><main class="main-content">
+  <h2>More from Info By Bora</h2>
+  <p>Welcome to the extended zone of Info By Bora! Explore exclusive memes, ideas, and visual content directly from AbhimaniBora1253.</p>
+
+  <h3 id="gallery">🖼️ Gallery</h3>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1612831662050-d4a2db57cd30" alt="Gallery Image 1">
+    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="Gallery Image 2">
+    <img src="https://images.unsplash.com/photo-1536323760109-ca8c07450053" alt="Gallery Image 3">
+  </div>
+
+  <h3 id="contact">📬 Contact Me</h3>
+  <form class="contact-form" action="https://formspree.io/f/moqgwbdg" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</main>
+
+  </div>  <footer>
+    <p>📧 borahsumon033@gmail.com</p>
+    <p>© 2025 INFO BY BORA. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+u
