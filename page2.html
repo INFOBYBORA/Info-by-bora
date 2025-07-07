@@ -1,9 +1,8 @@
 <!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>More - Info By Bora</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Info By Bora - Home</title>
   <style>
     * {
       margin: 0;
@@ -12,12 +11,12 @@
     }
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #111, #222);
+      background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
       color: white;
     }
     header {
       background: #000;
-      padding: 15px 20px;
+      padding: 15px 25px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -26,12 +25,12 @@
       z-index: 10;
     }
     .logo {
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       font-weight: bold;
-      color: #fff;
+      color: red;
     }
     nav a {
-      margin-left: 15px;
+      margin-left: 20px;
       color: white;
       text-decoration: none;
       font-weight: 500;
@@ -39,90 +38,47 @@
     nav a:hover {
       color: red;
     }
-    .page2-layout {
-      display: flex;
-      margin-top: 70px;
-      flex-wrap: wrap;
-      min-height: 100vh;
-    }
-    .sidebar {
-      width: 220px;
-      background: #1a1a1a;
-      padding: 20px;
-    }
-    .sidebar h3 {
-      margin-bottom: 10px;
-      color: red;
-    }
-    .sidebar ul {
-      list-style: none;
-    }
-    .sidebar li {
-      margin: 10px 0;
-    }
-    .sidebar a {
-      text-decoration: none;
-      color: #ccc;
-    }
-    .sidebar a:hover {
-      color: red;
-    }
-    .main-content {
-      flex: 1;
-      padding: 30px;
-    }
-    .main-content h2 {
-      margin-bottom: 10px;
-    }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin: 20px 0;
-    }
-    .gallery img {
-      width: 300px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
-    }
-    .contact-form {
-      margin-top: 25px;
+    .hero {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1607083200887-d7bdc13ed67b') no-repeat center center/cover;
       display: flex;
       flex-direction: column;
-      gap: 15px;
-      max-width: 500px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 30px;
     }
-    .contact-form input,
-    .contact-form textarea {
-      padding: 10px;
-      border-radius: 5px;
-      border: none;
-      background: #222;
-      color: white;
-      font-size: 1rem;
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      color: #fff;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
     }
-    .contact-form input::placeholder,
-    .contact-form textarea::placeholder {
-      color: #888;
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 25px;
+      color: #ccc;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
     }
-    .contact-form button {
+    .hero a {
       background: red;
-      color: white;
-      border: none;
-      padding: 12px;
+      padding: 12px 25px;
+      color: #fff;
+      text-decoration: none;
       font-size: 1rem;
       border-radius: 30px;
-      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 0 10px red;
     }
-    .contact-form button:hover {
+    .hero a:hover {
       background: #e60000;
     }
     footer {
       background: #000;
-      text-align: center;
       padding: 15px;
+      text-align: center;
       font-size: 0.9rem;
-      color: #ccc;
+      color: #aaa;
     }
   </style>
 </head>
@@ -134,39 +90,13 @@
       <a href="page2.html">More</a>
       <a href="https://youtube.com" target="_blank">YouTube</a>
     </nav>
-  </header>  <div class="page2-layout">
-    <aside class="sidebar">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="index.html">🏠 Home</a></li>
-        <li><a href="https://youtube.com" target="_blank">📺 YouTube</a></li>
-        <li><a href="#gallery">🖼️ Gallery</a></li>
-        <li><a href="#contact">📧 Contact</a></li>
-      </ul>
-    </aside><main class="main-content">
-  <h2>More from Info By Bora</h2>
-  <p>Welcome to the extended zone of Info By Bora! Explore exclusive memes, ideas, and visual content directly from AbhimaniBora1253.</p>
-
-  <h3 id="gallery">🖼️ Gallery</h3>
-  <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1612831662050-d4a2db57cd30" alt="Gallery Image 1">
-    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="Gallery Image 2">
-    <img src="https://images.unsplash.com/photo-1536323760109-ca8c07450053" alt="Gallery Image 3">
-  </div>
-
-  <h3 id="contact">📬 Contact Me</h3>
-  <form class="contact-form" action="https://formspree.io/f/moqgwbdg" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</main>
-
-  </div>  <footer>
-    <p>📧 borahsumon033@gmail.com</p>
-    <p>© 2025 INFO BY BORA. All rights reserved.</p>
+  </header>  <section class="hero">
+    <h1>Welcome to Info By Bora</h1>
+    <p>Bringing updates, memes & content straight from <strong>AbhimaniBora1253</strong></p>
+    <a href="https://www.youtube.com/@AbhimaniBora1253" target="_blank">Subscribe on YouTube</a>
+  </section>  <footer>
+    📧 borahsumon033@gmail.com<br>
+    © 2025 INFO BY BORA. All rights reserved.
   </footer>
 </body>
 </html>
-u
