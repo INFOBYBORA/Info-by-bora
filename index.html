@@ -2,51 +2,124 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Info By Bora - Home</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INFO BY BORA</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: white;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #000;
+      border-bottom: 1px solid #333;
+    }
+    header h1 {
+      color: #00f2aa;
+    }
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+    }
+    .hero {
+      background: url('https://source.unsplash.com/1080x720/?nature,river') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 1rem;
+    }
+    .hero h2 {
+      font-size: 2rem;
+      margin: 0.5rem 0;
+    }
+    .btn {
+      background-color: #00f2aa;
+      color: #000;
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .section-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 2rem;
+      background-color: #1a1a1a;
+    }
+    .card {
+      background-color: #111;
+      border: 1px solid #00f2aa33;
+      border-radius: 10px;
+      margin: 10px;
+      padding: 20px;
+      width: 250px;
+      text-align: center;
+    }
+    .card h3 {
+      color: #00f2aa;
+      margin-bottom: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 14px;
+      background-color: #000;
+      border-top: 1px solid #333;
+    }
+    footer a {
+      color: #00f2aa;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <div class="logo">Info By Bora</div>
+    <h1>INFO BY BORA</h1>
     <nav>
       <a href="index.html">Home</a>
-      <a href="page2.html">More</a>
+      <a href="more.html">More</a>
       <a href="uploads.html">Uploads</a>
     </nav>
   </header>
 
-  <section class="banner">
-    <div class="banner-text">
-      <h1>Welcome to Info By Bora</h1>
-      <p>Stay ahead with the freshest memes, updates & ideas brought to you by <strong>AbhimaniBora1253</strong>. We keep it real. We keep it fresh.</p>
-      <a href="https://www.youtube.com/@AbhimaniBora1253" target="_blank">Subscribe on YouTube</a>
-    </div>
+  <section class="hero">
+    <h2>WELCOME TO INFO BY BORA</h2>
+    <p>Stay ahead with the freshest memes, updates & ideas brought to you by <strong>AbhimanuBora1253</strong>.</p>
+    <a href="https://youtube.com/@AbhimanuBora1253" target="_blank" class="btn">Subscribe on YouTube</a>
+    <a href="uploads.html" class="btn">Explore My Uploads</a>
   </section>
 
-  <section class="uploads-link">
-    <a href="uploads.html" class="upload-btn">📁 Explore My Uploads</a>
-  </section>
-
-  <section class="features">
-    <div class="feature-box">
-      <h3>Tranding Board</h3>
+  <section class="section-container">
+    <div class="card">
+      <h3>TRANDING BOARD</h3>
       <p>Laugh, share & relate – memes crafted with originality & humor.</p>
     </div>
-    <div class="feature-box">
-      <h3>Useful Updates</h3>
+    <div class="card">
+      <h3>USEFUL UPDATES</h3>
       <p>Stay informed with valuable news & online content trends.</p>
     </div>
-    <div class="feature-box">
-      <h3>Creative Ideas</h3>
+    <div class="card">
+      <h3>CREATIVE IDEAS</h3>
       <p>Inspired thoughts, unique insights – directly from Bora’s mind.</p>
     </div>
   </section>
 
   <footer>
-    📧 Contact: borahsumon033@gmail.com<br>
-    © 2025 INFO BY BORA. All rights reserved.
+    <p>📧 Contact: <a href="mailto:borahsumon033@gmail.com">borahsumon033@gmail.com</a></p>
+    <p>&copy; 2025 INFO BY BORA. All rights reserved.</p>
   </footer>
 </body>
 </html>
